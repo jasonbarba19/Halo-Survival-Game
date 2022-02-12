@@ -1,0 +1,20 @@
+1. The event is triggered by clicking the mouse on any tile on the board as long as the "kill count" is at a value of 5 or higher.
+   The kill count is incremented anytime the player kills any alien entity on the board and is decremented by 5 any time
+   the event is triggered.
+
+2. When the event is triggered, 3 things will happen. First, a friendly master chief spawns on the tile that is clicked
+   and will try to assist you in killing the aliens using AStar. However, he can only kill the blue elites (elite) and the small grunts.
+   He cannot kill the red elites (elite2). Simultaneously, once a tile is clicked, if there are any blue elites on the board,
+   the nearest one will be turned into a red elite. Lastly and also simultaneously, the tiles of the 4 cardinal neighbors will
+   be turned into broken tiles.
+
+3. The red elite is the new entity that is created. It's first objective is to kill the nearest friendly master chief
+   to its location as long as there are friendly master chiefs on the board. Once there are no master chiefs left
+   besides the player, the red elites will then target the washing machines in order to try and end the game. The red
+   elite uses AStar for both of these tasks. The nearest blue entity that is turned into a red entity will cease to exist
+   and be removed from the entities list.
+
+4. The friendly master chief that is spawned will act just as all the other ones do.
+
+5. Masato - Coded the changes to the background tiles and the spawning of the new friendly master chief
+    Jason - Coded the red elite (elite2) class and changing the nearest blue elite (if one exists) to a red elite
